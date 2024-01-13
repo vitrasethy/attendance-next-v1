@@ -1,4 +1,5 @@
 import {cookies} from "next/headers";
+import QRCode from "react-qr-code";
 
 async function fetchRecordCode(record_id) {
   const token = cookies().get("token").value;
@@ -24,6 +25,12 @@ export default async function Page({params}) {
 
   return (
     <>
+      <QRCode
+        size={256}
+        style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+        value={`http://localhost:3000/classrooms/${params.classroom_id}/${params.record_id}/${record.code}`}
+        viewBox={`0 0 256 256`}
+      />
       <h1>http://localhost:3000/classrooms/{params.classroom_id}/{params.record_id}/{record.code}</h1>
     </>
   );
