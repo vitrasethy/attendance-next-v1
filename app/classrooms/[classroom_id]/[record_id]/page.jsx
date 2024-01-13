@@ -28,8 +28,8 @@ export default async function Page({params}) {
       <div className={'flex justify-center'}>
         <QRCode
           size={256}
-          style={{ height: "100px", width: "100px" }}
-          value={`http://localhost:3000/classrooms/${params.classroom_id}/${params.record_id}/${record.code}`}
+          style={{ height: "500px", width: "500px" }}
+          value={`https://attendance-sys.vercel.app/classrooms/${params.classroom_id}/${params.record_id}/${record.code}`}
           viewBox={`0 0 256 256`}
         />
       </div>
