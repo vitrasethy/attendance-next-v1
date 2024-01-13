@@ -25,13 +25,18 @@ export default async function Page({params}) {
 
   return (
     <>
-      <QRCode
-        size={256}
-        style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-        value={`http://localhost:3000/classrooms/${params.classroom_id}/${params.record_id}/${record.code}`}
-        viewBox={`0 0 256 256`}
-      />
-      <h1>http://localhost:3000/classrooms/{params.classroom_id}/{params.record_id}/{record.code}</h1>
+      <div className={'flex justify-center'}>
+        <QRCode
+          size={256}
+          style={{ height: "100px", width: "100px" }}
+          value={`http://localhost:3000/classrooms/${params.classroom_id}/${params.record_id}/${record.code}`}
+          viewBox={`0 0 256 256`}
+        />
+      </div>
+      <h1>
+        http://localhost:3000/classrooms/{params.classroom_id}/
+        {params.record_id}/{record.code}
+      </h1>
     </>
   );
 }
