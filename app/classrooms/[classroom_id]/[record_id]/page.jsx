@@ -34,7 +34,7 @@ export default async function Page({params}) {
         />
       </div>
       <h1>
-        http://localhost:3000/classrooms/{params.classroom_id}/
+        https://attendance-sys.vercel.app/classrooms/{params.classroom_id}/
         {params.record_id}/{record.code}
       </h1>
     </>
